@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "ngx-bootstrap": "^6.2.0",
+    "rxjs": "^6.6.3"
+  }
+}
