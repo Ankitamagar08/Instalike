@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { User } from './_models/user';
 import { AccountService } from './_services/account.service';
 
 @Component({
@@ -10,14 +11,14 @@ import { AccountService } from './_services/account.service';
 export class AppComponent implements OnInit {
   title = 'Instalive';
   users:any;
-  constructor(private http:HttpClient, private AccountService: AccountService) {}
+  constructor(private AccountService: AccountService) {}
 
   ngOnInit() {
    
     this.setCurrentUser();
   }
   setCurrentUser(){
-    const user = JSON.parse(localStorage.getItem('user'));
+    const user: User = JSON.parse(localStorage.getItem('user'));
     this.AccountService.setCurrentUser(user);
   }
   
