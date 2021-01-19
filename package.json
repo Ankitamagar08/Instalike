@@ -1,6 +1,10 @@
 {
   "dependencies": {
+    "@kolkov/ngx-gallery": "^1.2.3",
     "ngx-bootstrap": "^6.2.0",
     "rxjs": "^6.6.3"
+  },
+  "devDependencies": {
+    "reinstall-node-modules": "^2.0.0"
   }
 }
