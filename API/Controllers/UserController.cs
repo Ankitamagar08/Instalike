@@ -13,6 +13,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 using API.Extensions;
 using API.Helpers;
+using System;
 
 namespace API.Controllers
 {
@@ -30,6 +31,12 @@ namespace API.Controllers
             _userRepository = userRepository;
 
         }
+
+        internal static object GetUsername()
+        {
+            throw new NotImplementedException();
+        }
+
         [HttpGet]
 
         public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers([FromQuery]UserParams userParams)
